@@ -26,7 +26,7 @@ public class ItemCatController {
                 // 资源不存在
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
             }
-            return ResponseEntity.ok(new LayuiResult<>(0, "Success", list.size(), list));
+            return ResponseEntity.ok(list);
         } catch (Exception e){
             e.printStackTrace();
         }
