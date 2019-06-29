@@ -52,7 +52,7 @@
 	        <tr class="params hide">
 	        	<td>商品规格:</td>
 	        	<td>
-	        		
+
 	        	</td>
 	        </tr>
 	    </table>
@@ -71,7 +71,7 @@
 			TAOTAO.changeItemParam(node, "itemAddForm");
 		}});
 	});
-	
+
 	function submitForm(){
 		if(!$('#itemAddForm').form('validate')){
 			$.messager.alert('提示','表单还未填写完成!');
@@ -81,7 +81,7 @@
 		$("#itemAddForm [name=price]").val(eval($("#itemAddForm [name=priceView]").val()) * 100);
 		//将编辑器中的内容同步到隐藏多行文本中
 		itemAddEditor.sync();
-		
+
 		//输入的规格参数数据保存为json
 		var paramJson = [];
 		$("#itemAddForm .params li").each(function(i,e){
@@ -101,9 +101,9 @@
 			});
 		});
 		paramJson = JSON.stringify(paramJson);
-		
+
 		$("#itemAddForm [name=itemParams]").val(paramJson);
-		
+
 		/*
 		$.post("/rest/item/save",$("#itemAddForm").serialize(), function(data){
 			if(data.status == 200){
@@ -111,7 +111,7 @@
 			}
 		});
 		*/
-		
+
 		//提交到后台的RESTful
 		$.ajax({
 		   type: "POST",
@@ -125,7 +125,7 @@
 		   }
 		});
 	}
-	
+
 	function clearForm(){
 		$('#itemAddForm').form('reset');
 		itemAddEditor.html('');
