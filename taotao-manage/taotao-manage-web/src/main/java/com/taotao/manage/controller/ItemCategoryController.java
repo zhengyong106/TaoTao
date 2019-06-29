@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@RequestMapping("item/cat")
+@RequestMapping("item/category")
 @Controller
 public class ItemCategoryController {
     @Autowired
