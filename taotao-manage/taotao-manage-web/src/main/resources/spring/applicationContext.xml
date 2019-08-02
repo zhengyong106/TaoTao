@@ -4,16 +4,7 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- 加载 Properties 配置文件 -->
-	<!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
-
-	<!-- 使用 Spring 自带的 PropertyPlaceholderConfigurer 加载 -->
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:jdbc.properties</value>
-			</list>
-		</property>
-	</bean>
+	<context:property-placeholder location="classpath:jdbc.properties, classpath:env.properties"/>
 
 	<!-- 扫描包 -->
 	<context:component-scan base-package="com.taotao.manage">

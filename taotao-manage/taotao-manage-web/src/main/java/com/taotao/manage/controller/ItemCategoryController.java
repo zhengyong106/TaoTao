@@ -2,6 +2,8 @@ package com.taotao.manage.controller;
 
 import com.taotao.manage.pojo.ItemCategory;
 import com.taotao.manage.service.ItemCategoryService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,8 @@ import java.util.List;
 @RequestMapping("item/category")
 @Controller
 public class ItemCategoryController {
+    private static final Logger logger = LoggerFactory.getLogger(ItemCategoryController.class);
+
     @Autowired
     private ItemCategoryService itemCategoryService;
 

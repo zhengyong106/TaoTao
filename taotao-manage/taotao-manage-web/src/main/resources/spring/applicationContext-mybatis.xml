@@ -16,7 +16,7 @@
         </property>
     </bean>
 
-    <!-- 添加映射文件方法2 mapper接口的扫描器 -->
+    <!-- 通过包路径自动扫描 mapper 接口 -->
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.taotao.manage.mapper"/>
     </bean>
